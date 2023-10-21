@@ -1,6 +1,21 @@
 import telebot
+import random as r
 bot = telebot.TeleBot('6808053898:AAHOw7AqsmhRwjuGbz1cueWYRn0oIIT0n9M')
 
+
+
+def HAHA():
+    st=["HA","Ha","ha","ha"]
+    rand=r.randint(1,15)
+    ans=""
+    for i in range(rand):
+        ans+=st[r.randint(0,3)]
+    return (ans)
+
+
+@bot.message_handler(commands= ["haha"] )
+def main(message):
+    bot.send_message(message.chat.id, HAHA())
 
 @bot.message_handler(commands=['start'])
 def begin(message):
@@ -33,5 +48,5 @@ def main(message):
 
 @bot.message_handler(commands=['help'])
 def start(message):
-    bot.send_message(message.chat.id, 'Список моих команд:\n /start\n /sites\n /infa\n')
+    bot.send_message(message.chat.id, 'Список моих команд:\n /start\n /sites\n /infa\n /haha\n')
 bot.polling(none_stop = True)
