@@ -1,5 +1,8 @@
 import telebot
 import random as r
+
+from asciiDrawer import create
+
 bot = telebot.TeleBot('6808053898:AAHOw7AqsmhRwjuGbz1cueWYRn0oIIT0n9M')
 
 
@@ -49,4 +52,15 @@ def main(message):
 @bot.message_handler(commands=['help'])
 def start(message):
     bot.send_message(message.chat.id, 'Список моих команд:\n /start\n /sites\n /infa\n /haha\n')
+
+@bot.message_handler(content_types=['photo'])
+def start(message):
+    file_path = bot.get_file(message.photo[-1].file_id).file_path
+    file = bot.download_file(file_path)
+    with open("userPhoto.png", "wb") as code:
+        code.write(file)
+    create('userPhoto.png')
+    bot.send_photo(message.chat.id, open('./output.png', 'rb'))
+
+
 bot.polling(none_stop = True)
