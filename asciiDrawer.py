@@ -31,4 +31,4 @@ def create(path):
 
             drawer.text((j * CHAR_WIDTH, i * CHAR_HEIGHT), CHARS[math.floor(avrg * INTERVAL)], fill=(r, g, b))
 
-    outputImage.save('output.png')
+    outputImage.save('./images/output.png')
