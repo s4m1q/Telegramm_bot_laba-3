@@ -1,9 +1,13 @@
+import os
 import telebot
 import random as r
 
 from asciiDrawer import create
 
 bot = telebot.TeleBot('6808053898:AAHOw7AqsmhRwjuGbz1cueWYRn0oIIT0n9M')
+
+if not os.path.exists('images'):
+    os.makedirs('images')
 
 
 def HAHA():
@@ -77,7 +81,6 @@ def start(message):
         code.write(file)
     create('./images/userPhoto.png')
     bot.send_photo(message.chat.id, open('./images/output.png', 'rb'), timeout=60)
-
 
 while True:
     try:
