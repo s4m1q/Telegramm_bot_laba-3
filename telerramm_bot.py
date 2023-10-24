@@ -185,7 +185,15 @@ def main(message):
 
 @bot.message_handler(commands=['help'])
 def start(message):
-    bot.send_message(message.chat.id, 'Список моих команд:\n /start\n /sites\n /infa\n /haha\n /kitten\n также я могу отрисовывать картинки, отправьте мне любое фото!')
+    bot.send_message(message.chat.id, 'Список моих команд:\n /start\n /sites\n /infa\n /haha\n /kitten\n Также я могу отрисовывать картинки, отправьте мне любое фото!')
+
+@bot.message_handler( commands = ['rus_ruletka'] )
+def game(message):
+    i = r.randint(1, 7)
+    if i == 7:
+        bot.send_message(message.chat.id, 'You lose!')
+    else:
+        bot.send_message(message.chat.id, 'You alive! <em>(unfortunately)</em>', parse_mode='html')
 
 
 @bot.message_handler(content_types=['photo'])
