@@ -185,7 +185,7 @@ def main(message):
 
 @bot.message_handler(commands=['help'])
 def start(message):
-    bot.send_message(message.chat.id, 'Список моих команд:\n /start\n /sites\n /infa\n /haha\n /kitten\n Также я могу отрисовывать картинки, отправьте мне любое фото!')
+    bot.send_message(message.chat.id, 'Список моих команд:\n /start\n /sites\n /infa\n /haha\n /kitten\n /rus_ruletka\n Также я могу отрисовывать картинки, отправьте мне любое фото!')
 
 @bot.message_handler( commands = ['rus_ruletka'] )
 def game(message):
