@@ -39,7 +39,7 @@ def vivod_comand(message):
 
 @bot.message_handler(commands = ['kitten'])
 def cat_photo(message):
-    i = r.randint(1, 23)
+    i = r.randint(1, 36)
     if i == 1:
             bot.send_message(message.chat.id, "https://fanibani.ru/wp-content/uploads/2022/12/malysh-koshka.jpg")
 
@@ -109,6 +109,47 @@ def cat_photo(message):
     elif i == 23:
             bot.send_message(message.chat.id, "https://shutniks.com/wp-content/uploads/2019/11/milye_kotyata_i_smeshnye_32_30114121.jpg")
 
+    elif i == 24:
+            bot.send_message(message.chat.id, "https://i.pinimg.com/originals/16/76/44/1676446a31c6d4cdb3e1e8a10fa86644.jpg")
+
+    elif i == 24:
+            bot.send_message(message.chat.id, "http://pro-kotikov.ru/wp-content/uploads/2018/06/cute-exotic6.jpg")
+
+    elif i == 25:
+            bot.send_message(message.chat.id, "https://searchthisweb.com/wallpaper/cute-kittens_4288x2848_a4v3k.jpg")
+
+    elif i == 26:
+            bot.send_message(message.chat.id, "https://get.wallhere.com/photo/2048x1345-px-animal-cute-eye-kitten-1908333.jpg")
+
+    elif i == 27:
+            bot.send_message(message.chat.id, "https://webpulse.imgsmail.ru/imgpreview?key=pulse_cabinet-image-73d95ddc-4439-4984-9b32-40b01114d767&mb=webpulse")
+
+    elif i == 28:
+            bot.send_message(message.chat.id, "https://shutniks.com/wp-content/uploads/2019/11/milye_kotyata_i_smeshnye_32_30114121.jpg")
+
+    elif i == 29:
+            bot.send_message(message.chat.id, "https://wdorogu.ru/images/wp-content/uploads/2020/10/2fdf2b2be1825b9.jpg")
+
+    elif i == 30:
+            bot.send_message(message.chat.id, "https://wdorogu.ru/images/wp-content/uploads/2020/10/s1200-2-15.jpg")
+
+    elif i == 31:
+            bot.send_message(message.chat.id, "https://chudo-prirody.com/uploads/posts/2021-08/1628637595_122-p-kotyata-milie-foto-132.jpg")
+
+    elif i == 32:
+            bot.send_message(message.chat.id, "http://mobilmusic.ru/mfile/08/0a/90/1586458.jpg")
+
+    elif i == 33:
+            bot.send_message(message.chat.id, "https://celes.club/uploads/posts/2022-10/1666931823_14-celes-club-p-samie-milie-kotiki-v-mire-krasivo-14.jpg")
+
+    elif i == 34:
+            bot.send_message(message.chat.id, "https://android-obzor.com/wp-content/uploads/2022/03/nastol.jpg")
+
+    elif i == 35:
+            bot.send_message(message.chat.id, "https://chudo-prirody.com/uploads/posts/2021-08/1628761106_138-p-foto-kotyat-milikh-i-nyashnikh-142.jpg")
+
+    elif i == 36:
+            bot.send_message(message.chat.id, "https://img.desktopwallpapers.ru/animals/pics/wide/1920x1200/4c87fb310b3e56afc11dad6ca2d1934f.jpg")
 @bot.message_handler(
     commands=['kalkul_matric', 'sinonimaizer', 'anti_copy_plagiat', 'free_IT_courses', 'best_kalkul', 'sleep_manager',
               'spargalka'])
@@ -144,7 +185,7 @@ def main(message):
 
 @bot.message_handler(commands=['help'])
 def start(message):
-    bot.send_message(message.chat.id, 'Список моих команд:\n /start\n /sites\n /infa\n /haha\n')
+    bot.send_message(message.chat.id, 'Список моих команд:\n /start\n /sites\n /infa\n /haha\n /kitten\n')
 
 
 @bot.message_handler(content_types=['photo'])
