@@ -190,7 +190,7 @@ def start(message):
 @bot.message_handler( commands = ['rus_ruletka'] )
 def game(message):
     i = r.randint(1, 7)
-    if i == 7:
+    if i == 7 or i == 1:
         bot.send_message(message.chat.id, 'You lose!')
     else:
         bot.send_message(message.chat.id, 'You alive! <em>(unfortunately)</em>', parse_mode='html')
